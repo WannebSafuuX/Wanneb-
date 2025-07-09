@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsuPro - Professional Insulation Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for elements that need more specific styling */
+        :root {
+            --color-primary: #2563EB; /* Updated Primary Color - A richer blue */
+            --color-secondary: #059669; /* Updated Secondary Color - A deeper green */
+            --color-accent: #F97316; /* Updated Accent Color - A vibrant orange */
+            --color-light: #F9FAFB; /* Updated Light Color - A slightly off-white */
+            --color-dark: #111827; /* Updated Dark Color - A deeper gray */
+            --color-hero-bg: #1F2937; /* New color for Hero background */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif; /* Changed to a more modern font */
+        }
+
+        .hero {
+            background: linear-gradient(rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 0.85)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keep fixed attachment for parallax effect */
+            height: 85vh; /* Slightly increased height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-weight: 700; /* Bolder hero title */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Added subtle text shadow */
+        }
+
+        .hero p {
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Added subtle text shadow */
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            border-top: 3px solid var(--color-primary); /* Added border to dropdown */
+        }
+
+        .service-card {
+            transition: all 0.3s ease-in-out; /* Smoother transition */
+            border: 1px solid var(--color-light);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px); /* Increased hover effect */
+            box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.1), 0 10px 15px -5px rgba(0, 0, 0, 0.05); /* Enhanced shadow */
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease-in-out; /* Smoother transition */
+            border-left: 4px solid var(--color-primary); /* Accent border */
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.03); /* Slightly reduced scale for subtlety */
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px; /* Thicker underline */
+            background: var(--color-primary);
+            transition: width .3s ease-out; /* Smoother transition */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+        .btn-primary:hover {
+            background-color: #1D4ED8; /* Darker shade of primary for hover */
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--color-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            border: 1px solid var(--color-primary);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .btn-secondary:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        /* Section Title Styling */
+        .section-title {
+            font-size: 2.25rem; /* Larger section titles */
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--color-dark);
+        }
+        .section-subtitle {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #4B5563; /* Slightly lighter subtitle color */
+            margin-bottom: 3rem;
+        }
+        .highlight {
+            color: var(--color-primary);
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased text-gray-700 bg-var(--color-light)"> <!-- Changed default text color and body bg -->
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50"> <!-- Increased shadow -->
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center"> <!-- Increased padding -->
+            <div class="flex items-center space-x-3"> <!-- Increased spacing -->
+                <i class="fas fa-building-shield text-var(--color-primary) text-3xl"></i> <!-- Used CSS variable and increased size -->
+                <a href="#" class="text-2xl font-bold text-var(--color-dark)">Advanced Construction <span class="text-var(--color-primary)">Insulation</span></a>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="hidden md:flex items-center space-x-3 mr-6"> <!-- Increased spacing and margin -->
+                <button class="text-gray-700 hover:text-var(--color-primary) font-medium text-sm transition-colors">EN</button>
+                <span class="text-gray-400">|</span>
+                <button class="text-gray-700 hover:text-var(--color-primary) font-medium text-sm transition-colors">العربية</button>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <nav id="main-nav" class="hidden md:flex items-center space-x-6"> <!-- Adjusted spacing -->
+                <a href="#" class="nav-link font-medium text-gray-700 hover:text-var(--color-primary) transition-colors">Home</a>
+
+                <a href="#about" class="nav-link font-medium text-gray-700 hover:text-var(--color-primary) transition-colors">About Us</a>
+
+                <div class="dropdown relative">
+                    <button class="nav-link font-medium text-gray-700 hover:text-var(--color-primary) transition-colors flex items-center">
+                        Services <i class="fas fa-chevron-down ml-1.5 text-xs"></i> <!-- Increased margin -->
+                    </button>
+                    <div class="dropdown-menu absolute hidden mt-2 py-2 w-52 bg-white rounded-md shadow-xl z-50"> <!-- Increased width -->
+                        <a href="#services" class="block px-4 py-2.5 text-gray-700 hover:bg-var(--color-light) hover:text-var(--color-primary) transition-colors">Thermal Insulation</a>
+                        <a href="#services" class="block px-4 py-2.5 text-gray-700 hover:bg-var(--color-light) hover:text-var(--color-primary) transition-colors">Acoustic Insulation</a>
+                        <a href="#services" class="block px-4 py-2.5 text-gray-700 hover:bg-var(--color-light) hover:text-var(--color-primary) transition-colors">Fireproofing</a>
+                        <a href="#services" class="block px-4 py-2.5 text-gray-700 hover:bg-var(--color-light) hover:text-var(--color-primary) transition-colors">Specialized Solutions</a>
+                    </div>
+                </div>
+
+                <a href="#projects" class="nav-link font-medium text-gray-700 hover:text-var(--color-primary) transition-colors">Projects</a>
+                <a href="#products" class="nav-link font-medium text-gray-700 hover:text-var(--color-primary) transition-colors">Products</a>
+                <a href="#blog" class="nav-link font-medium text-gray-700 hover:text-var(--color-primary) transition-colors">Resources</a>
+                <a href="#contact" class="nav-link font-medium text-gray-700 hover:text-var(--color-primary) transition-colors">Contact</a>
+                <a href="#quote" class="btn-primary text-sm">Get a Quote</a> <!-- Used btn-primary class -->
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg border-t border-gray-200">
+            <a href="#" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) pl-2 rounded transition-colors">Home</a>
+            <a href="#about" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) pl-2 rounded transition-colors">About Us</a>
+            <div class="pl-2">
+                <button id="services-toggle" class="w-full flex justify-between items-center py-2.5">
+                    <span class="hover:text-var(--color-primary) transition-colors">Services</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="services-menu" class="hidden pl-4 border-l-2 border-var(--color-primary) ml-1">
+                    <a href="#services" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) transition-colors">Thermal Insulation</a>
+                    <a href="#services" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) transition-colors">Acoustic Insulation</a>
+                    <a href="#services" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) transition-colors">Fireproofing</a>
+                    <a href="#services" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) transition-colors">Specialized Solutions</a>
+                </div>
+            </div>
+            <a href="#projects" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) pl-2 rounded transition-colors">Projects</a>
+            <a href="#products" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) pl-2 rounded transition-colors">Products</a>
+            <a href="#blog" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) pl-2 rounded transition-colors">Resources</a>
+            <a href="#contact" class="block py-2.5 hover:bg-var(--color-light) hover:text-var(--color-primary) pl-2 rounded transition-colors">Contact</a>
+            <a href="#quote" class="block bg-var(--color-primary) text-white text-center py-2.5 px-4 rounded-md my-2 hover:bg-blue-700 transition-colors">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero text-white"> <!-- Removed flex items-center, handled by hero class -->
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Expert Insulation Solutions</h1> <!-- Adjusted text size and margin -->
+            <p class="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto">Enhancing energy efficiency, comfort, and safety for your property with our premium insulation services.</p> <!-- Adjusted text size and margin -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 md:gap-6">
+                <a href="#quote" class="btn-primary px-8 py-3 text-lg">Get a Free Quote</a> <!-- Used btn-primary class -->
+                <a href="#services" class="btn-secondary px-8 py-3 text-lg">Our Services</a> <!-- Used btn-secondary class -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white"> <!-- Changed bg to white, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16"> <!-- Increased margin -->
+                <h2 class="section-title">About <span class="highlight">InsuPro</span></h2>
+                <p class="section-subtitle">We are a team of dedicated professionals committed to providing top-quality insulation solutions for residential and commercial properties.</p> <!-- Used section-subtitle class -->
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="mb-8 md:mb-0 grid grid-cols-2 gap-6"> <!-- Increased gap -->
+                    <div class="rounded-xl shadow-xl overflow-hidden aspect-square"> <!-- Enhanced shadow, aspect ratio -->
+                        <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Insulation Installation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="rounded-xl shadow-xl overflow-hidden aspect-square"> <!-- Enhanced shadow, aspect ratio -->
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Industrial Insulation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="rounded-xl shadow-xl overflow-hidden aspect-square"> <!-- Enhanced shadow, aspect ratio -->
+                        <img src="https://images.unsplash.com/photo-1554224155-16954435a230?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                             alt="Commercial Insulation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="relative rounded-xl shadow-xl overflow-hidden bg-var(--color-primary) text-white p-6 flex flex-col justify-center items-center aspect-square"> <!-- Enhanced shadow, aspect ratio -->
+                        <span class="text-4xl font-bold">250+</span> <!-- Increased font size -->
+                        <span class="text-xl mt-1">Projects Completed</span> <!-- Increased font size and margin -->
+                    </div>
+                </div>
+                <div class="space-y-8"> <!-- Increased spacing -->
+                    <div class="flex items-start">
+                        <div class="bg-var(--color-primary)/10 p-4 rounded-full mr-5 shrink-0"> <!-- Adjusted background, padding, margin -->
+                            <i class="fas fa-trophy text-var(--color-primary) text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1.5 text-var(--color-dark)">15+ Years Experience</h3> <!-- Adjusted margin and color -->
+                            <p class="text-gray-600 leading-relaxed">Our team brings over 15 years of combined experience in the insulation industry, ensuring premium service quality and expert advice.</p> <!-- Added leading-relaxed -->
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-var(--color-secondary)/10 p-4 rounded-full mr-5 shrink-0"> <!-- Used secondary color -->
+                            <i class="fas fa-leaf text-var(--color-secondary) text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1.5 text-var(--color-dark)">Eco-Friendly Solutions</h3>
+                            <p class="text-gray-600 leading-relaxed">We prioritize sustainable materials and methods to reduce environmental impact while maximizing energy efficiency for a greener tomorrow.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-var(--color-accent)/10 p-4 rounded-full mr-5 shrink-0"> <!-- Used accent color -->
+                            <i class="fas fa-shield-alt text-var(--color-accent) text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1.5 text-var(--color-dark)">Certified Professionals</h3>
+                            <p class="text-gray-600 leading-relaxed">All our technicians are fully certified and trained in the latest insulation techniques and safety protocols, guaranteeing top-notch workmanship.</p>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary mt-6 text-base"> <!-- Used btn-primary class, adjusted margin -->
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-var(--color-light)"> <!-- Changed bg, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16"> <!-- Increased margin -->
+                <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+                <p class="section-subtitle">Comprehensive insulation solutions tailored to meet your specific needs and requirements, ensuring comfort and efficiency.</p> <!-- Used section-subtitle class -->
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"> <!-- Increased gap -->
+                <!-- Thermal Insulation -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl"> <!-- Increased padding, rounded-xl, enhanced shadows -->
+                    <div class="relative h-52 rounded-lg overflow-hidden mb-6 group"> <!-- Increased height and margin -->
+                        <img src="https://images.unsplash.com/photo-1560060141-7b9018741736?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Thermal Insulation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5"> <!-- Darker gradient, increased padding -->
+                            <h3 class="text-white text-2xl font-bold">Thermal Insulation</h3> <!-- Increased font size -->
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-var(--color-dark)">Thermal Efficiency</h3> <!-- Adjusted title -->
+                    <p class="text-gray-600 mb-5 leading-relaxed">Reduce energy costs and maintain comfortable temperatures year-round. Compliant with UAE Fire Code and Green Building standards.</p> <!-- Added leading-relaxed -->
+                    <div class="flex items-center mt-4 mb-5">
+                        <img src="images/uae-fire-code-badge.png" alt="UAE Fire Code Compliant" class="h-10 mr-4"> <!-- Increased size and margin -->
+                        <img src="images/green-building-badge.png" alt="Green Building Certified" class="h-10"> <!-- Increased size -->
+                    </div>
+                    <a href="#" class="text-var(--color-primary) hover:text-var(--color-accent) font-semibold flex items-center group transition-colors">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i> <!-- Adjusted icon size, hover effect -->
+                    </a>
+                </div>
+
+                <!-- Acoustic Insulation -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="relative h-52 rounded-lg overflow-hidden mb-6 group">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Acoustic Insulation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
+                            <h3 class="text-white text-2xl font-bold">Acoustic Insulation</h3>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-var(--color-dark)">Sound Control</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Create peaceful, quiet environments with our soundproofing materials and techniques that effectively block unwanted noise.</p>
+                     <a href="#" class="text-var(--color-primary) hover:text-var(--color-accent) font-semibold flex items-center group transition-colors mt-auto pt-4"> {/* Added mt-auto and pt-4 for alignment */}
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Fireproofing -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="relative h-52 rounded-lg overflow-hidden mb-6 group">
+                        <img src="https://images.unsplash.com/photo-1604709177595-ee9e5a6483e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Fireproofing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
+                            <h3 class="text-white text-2xl font-bold">Fireproofing</h3>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-var(--color-dark)">Safety Assured</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Protect your property and its occupants with our fire-resistant insulation materials that meet the highest safety standards.</p>
+                     <a href="#" class="text-var(--color-primary) hover:text-var(--color-accent) font-semibold flex items-center group transition-colors mt-auto pt-4">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Specialized Solutions -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl">
+                    <div class="relative h-52 rounded-lg overflow-hidden mb-6 group">
+                        <img src="https://images.unsplash.com/photo-1512438248247-f082a5a3e9dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Specialized Solutions" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
+                            <h3 class="text-white text-2xl font-bold">Specialized Solutions</h3>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-var(--color-dark)">Custom Applications</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Custom insulation solutions for unique requirements including industrial facilities, historical buildings, and more.</p>
+                    <a href="#" class="text-var(--color-primary) hover:text-var(--color-accent) font-semibold flex items-center group transition-colors mt-auto pt-4">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white"> <!-- Changed bg, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16"> <!-- Increased margin -->
+                <h2 class="section-title">Our <span class="highlight">Projects</span></h2>
+                <p class="section-subtitle">Explore some of our recent insulation projects across residential, commercial, and industrial sectors, showcasing our expertise and quality.</p> <!-- Used section-subtitle -->
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"> <!-- Increased gap -->
+                <!-- Project 1 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"> <!-- Enhanced styling -->
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                         alt="Residential Insulation" class="w-full h-72 object-cover transition duration-500 group-hover:scale-110"> <!-- Increased height -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Modern Family Home</h3> <!-- Increased font size -->
+                        <p class="text-gray-300 mb-3 text-sm">Full thermal and acoustic insulation retrofit</p>
+                        <div class="grid grid-cols-2 gap-3 my-3"> <!-- Increased gap and margin -->
+                            <div class="bg-white/25 rounded-lg p-3 text-center"> <!-- Enhanced styling -->
+                                <p class="text-xs text-gray-200 uppercase tracking-wider">Energy Savings</p>
+                                <p class="text-white font-bold text-xl">35%</p> <!-- Increased font size -->
+                            </div>
+                            <div class="bg-white/25 rounded-lg p-3 text-center"> <!-- Enhanced styling -->
+                                <p class="text-xs text-gray-200 uppercase tracking-wider">Noise Reduction</p>
+                                <p class="text-white font-bold text-xl">25dB</p> <!-- Increased font size -->
+                            </div>
+                        </div>
+                        <span class="bg-var(--color-primary) text-white text-xs px-3 py-1.5 rounded-full inline-block self-start font-medium">Residential</span> <!-- Used CSS var, adjusted padding -->
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                         alt="Office Insulation" class="w-full h-72 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Downtown Office Tower</h3>
+                        <p class="text-gray-300 mb-3 text-sm">Fireproofing and acoustic insulation for enhanced safety and productivity.</p>
+                        <span class="bg-var(--color-secondary) text-white text-xs px-3 py-1.5 rounded-full inline-block self-start font-medium">Commercial</span> <!-- Used secondary color -->
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="relative group overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1581093450029-9dda92139755?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                         alt="Industrial Insulation" class="w-full h-72 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-white text-2xl font-bold mb-2">Manufacturing Facility</h3>
+                        <p class="text-gray-300 mb-3 text-sm">High-temperature industrial insulation for operational efficiency and safety.</p>
+                        <span class="bg-var(--color-accent) text-white text-xs px-3 py-1.5 rounded-full inline-block self-start font-medium">Industrial</span> <!-- Used accent color -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16"> <!-- Increased margin -->
+                <a href="#" class="btn-primary text-base px-10 py-3.5"> <!-- Used btn-primary, adjusted padding -->
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-var(--color-light)"> <!-- Changed bg, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16"> <!-- Increased margin -->
+                <h2 class="section-title">Quality <span class="highlight">Products</span></h2>
+                <p class="section-subtitle">We use only the highest quality materials from trusted manufacturers for all our insulation projects, ensuring durability and performance.</p> <!-- Used section-subtitle -->
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl group"> <!-- Enhanced styling -->
+                    <div class="h-56 overflow-hidden"> <!-- Increased height -->
+                        <img src="https://images.unsplash.com/photo-1540099160059-3a4859d330b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Fiberglass Insulation" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 md:p-8"> <!-- Increased padding -->
+                        <h3 class="text-2xl font-semibold mb-2 text-var(--color-dark)">EcoTherm Fiberglass</h3> <!-- Increased font size -->
+                        <p class="text-gray-600 mb-5 leading-relaxed">High-performance thermal and acoustic insulation with superior fire resistance for lasting comfort.</p> <!-- Added leading-relaxed -->
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="font-bold text-var(--color-primary) text-lg">$2.99 / sq.ft</span> <!-- Used CSS var, increased font size -->
+                            <a href="#" class="text-sm font-semibold text-var(--color-primary) hover:text-var(--color-accent) flex items-center group transition-colors">
+                                View Details <i class="fas fa-chevron-right ml-1.5 text-xs group-hover:translate-x-0.5 transition-transform"></i> <!-- Adjusted icon margin -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1617099170725-7c97250e0326?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Spray Foam" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-2xl font-semibold mb-2 text-var(--color-dark)">AirSeal Spray Foam</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Expanding polyurethane foam that seals gaps and provides superior insulation and air tightness.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="font-bold text-var(--color-primary) text-lg">$4.50 / sq.ft</span>
+                            <a href="#" class="text-sm font-semibold text-var(--color-primary) hover:text-var(--color-accent) flex items-center group transition-colors">
+                                View Details <i class="fas fa-chevron-right ml-1.5 text-xs group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1593005510325-e7936a694f32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Mineral Wool" class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-2xl font-semibold mb-2 text-var(--color-dark)">RockGuard Mineral Wool</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Non-combustible insulation with excellent sound absorption and fire protection properties.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="font-bold text-var(--color-primary) text-lg">$3.75 / sq.ft</span>
+                            <a href="#" class="text-sm font-semibold text-var(--color-primary) hover:text-var(--color-accent) flex items-center group transition-colors">
+                                View Details <i class="fas fa-chevron-right ml-1.5 text-xs group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16"> <!-- Increased margin -->
+                <a href="#" class="btn-primary text-base px-10 py-3.5 mr-4"> <!-- Used btn-primary, adjusted padding, added margin -->
+                    View All Products
+                </a>
+                <p class="mt-6 text-gray-700">Need help choosing the right product? <a href="#contact" class="text-var(--color-primary) hover:underline font-medium">Contact our experts</a></p> <!-- Adjusted margin and styling -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-r from-var(--color-primary) to-var(--color-secondary) text-white"> <!-- Used CSS vars, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16"> <!-- Increased margin -->
+                <h2 class="text-3xl font-bold mb-3 text-white">What Our Clients Say</h2> <!-- Adjusted color -->
+                <p class="max-w-2xl mx-auto text-blue-100/90 leading-relaxed">Don't just take our word for it - hear from our satisfied customers who have experienced the InsuPro difference.</p> <!-- Adjusted opacity and leading -->
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white/95 text-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl backdrop-blur-sm"> <!-- Enhanced styling -->
+                    <div class="flex items-center mb-5"> <!-- Increased margin -->
+                        <div class="flex items-center text-var(--color-accent)"> <!-- Used CSS var -->
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed text-lg">"The InsuPro team transformed our home. Our energy bills have dropped by 30% and the house stays comfortable in all seasons. Professional, punctual, and excellent workmanship."</p> <!-- Increased font size -->
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full bg-gray-200 mr-4 overflow-hidden border-2 border-white shadow-md"> <!-- Increased size, added border and shadow -->
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-var(--color-dark)">Sarah Johnson</h4> <!-- Increased font size, used CSS var -->
+                            <p class="text-sm text-gray-500">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white/95 text-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl backdrop-blur-sm">
+                    <div class="flex items-center mb-5">
+                        <div class="flex items-center text-var(--color-accent)">
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed text-lg">"We hired InsuPro for our new office building's insulation needs. Their attention to detail and knowledge of commercial building codes was impressive. The project was completed on time and on budget."</p>
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full bg-gray-200 mr-4 overflow-hidden border-2 border-white shadow-md">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Michael Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-var(--color-dark)">Michael Chen</h4>
+                            <p class="text-sm text-gray-500">Property Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white/95 text-gray-800 p-8 rounded-xl shadow-xl hover:shadow-2xl backdrop-blur-sm">
+                    <div class="flex items-center mb-5">
+                        <div class="flex items-center text-var(--color-accent)">
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star mr-1"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed text-lg">"The specialized insulation solution they provided for our restaurant kitchen exceeded our expectations. Reduced noise complaints and improved our working environment significantly."</p>
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full bg-gray-200 mr-4 overflow-hidden border-2 border-white shadow-md">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Elena Rodriguez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-var(--color-dark)">Elena Rodriguez</h4>
+                            <p class="text-sm text-gray-500">Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Resources Section -->
+    <section id="blog" class="py-20 bg-white"> <!-- Changed bg, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16"> <!-- Increased margin -->
+                <h2 class="section-title">Insulation <span class="highlight">Resources</span></h2>
+                <p class="section-subtitle">Learn more about insulation solutions with our helpful articles, guides, and case studies from industry experts.</p> <!-- Used section-subtitle -->
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl group flex flex-col"> <!-- Enhanced styling, flex col for footer alignment -->
+                    <div class="h-56 overflow-hidden"> <!-- Increased height -->
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Insulation Types" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow"> <!-- Increased padding, flex setup for footer -->
+                        <span class="text-sm text-var(--color-primary) font-semibold uppercase tracking-wider mb-2">Guide</span> <!-- Used CSS var, adjusted styling -->
+                        <h3 class="text-xl lg:text-2xl font-semibold mt-1 mb-3 text-var(--color-dark) flex-grow">Choosing the Right Insulation for Your Home</h3> <!-- Increased font size, flex-grow -->
+                        <p class="text-gray-600 mb-5 leading-relaxed">A comprehensive guide to help homeowners select the best insulation materials based on climate, budget and home structure.</p>
+                        <a href="#" class="text-var(--color-primary) hover:text-var(--color-accent) font-semibold flex items-center group transition-colors mt-auto"> {/* mt-auto to push to bottom */}
+                            Read Article <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl group flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Energy Savings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <span class="text-sm text-var(--color-secondary) font-semibold uppercase tracking-wider mb-2">Energy Efficiency</span> <!-- Used secondary color -->
+                        <h3 class="text-xl lg:text-2xl font-semibold mt-1 mb-3 text-var(--color-dark) flex-grow">How Proper Insulation Reduces Energy Costs</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Understanding the connection between home insulation and energy savings with real-world examples and statistics.</p>
+                        <a href="#" class="text-var(--color-primary) hover:text-var(--color-accent) font-semibold flex items-center group transition-colors mt-auto">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl group flex flex-col">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Soundproofing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <span class="text-sm text-var(--color-accent) font-semibold uppercase tracking-wider mb-2">Acoustics</span> <!-- Used accent color -->
+                        <h3 class="text-xl lg:text-2xl font-semibold mt-1 mb-3 text-var(--color-dark) flex-grow">Soundproofing Your Home Office or Studio</h3>
+                        <p class="text-gray-600 mb-5 leading-relaxed">Professional tips for creating a quiet working or recording space with effective acoustic insulation solutions.</p>
+                        <a href="#" class="text-var(--color-primary) hover:text-var(--color-accent) font-semibold flex items-center group transition-colors mt-auto">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16"> <!-- Increased margin -->
+                <a href="#" class="btn-primary text-base px-10 py-3.5"> <!-- Used btn-primary -->
+                    View All Resources
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-var(--color-dark) to-gray-800 text-white"> <!-- Adjusted gradient, padding -->
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-5">Ready to Improve Your Space?</h2> <!-- Increased font size -->
+            <p class="max-w-xl mx-auto text-gray-300 mb-10 leading-relaxed text-lg">Get in touch with our insulation experts today to discuss your project and receive a free, no-obligation quote tailored to your needs.</p> <!-- Adjusted text color and size -->
+            <div class="flex flex-col sm:flex-row justify-center gap-5"> <!-- Increased gap -->
+                <a href="#quote" class="btn-primary px-8 py-3.5 text-lg">Get a Free Quote</a> <!-- Used btn-primary, adjusted padding -->
+                <a href="tel:+18005551234" class="bg-white hover:bg-gray-200 text-var(--color-dark) px-8 py-3.5 rounded-md transition duration-300 font-semibold text-lg flex items-center justify-center group">
+                    <i class="fas fa-phone mr-2.5 group-hover:animate-pulse"></i> Call Now <!-- Added hover animation -->
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-var(--color-light)"> <!-- Changed bg, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16"> <!-- Increased margin -->
+                <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+                <p class="section-subtitle">Have questions or ready to start your project? Reach out to our friendly and knowledgeable team today.</p> <!-- Used section-subtitle -->
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-start"> <!-- Increased gap -->
+                <div class="bg-white p-8 md:p-10 rounded-xl shadow-xl"> <!-- Enhanced styling -->
+                    <h3 class="text-2xl font-semibold mb-8 text-var(--color-dark)">Send Us a Message</h3> <!-- Increased font size and margin -->
+                    <form class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Name*</label>
+                                <input type="text" id="name" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm" required> <!-- Adjusted padding and rounded-lg -->
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email*</label>
+                            <input type="email" id="email" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm" required>
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-1.5">Service Interest</label>
+                            <select id="service" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm bg-white">
+                                <option value="">Select a service</option>
+                                <option value="thermal">Thermal Insulation</option>
+                                <option value="acoustic">Acoustic Insulation</option>
+                                <option value="fireproof">Fireproofing</option>
+                                <option value="specialized">Specialized Solutions</option>
+                                <option value="unsure">Not Sure</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Message*</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm" required></textarea> <!-- Increased rows -->
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-3 text-base"> {/* Used btn-primary, adjusted padding */}
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <div class="space-y-8"> {/* Increased spacing */}
+                    <h3 class="text-2xl font-semibold mb-2 text-var(--color-dark)">Our Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-var(--color-primary)/10 p-4 rounded-full mr-5 shrink-0">
+                                <i class="fas fa-map-marker-alt text-var(--color-primary) text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1 text-lg">Office Address</h4>
+                                <p class="text-gray-600 leading-relaxed">123 Insulation Street<br>Suite 500<br>Building City, BC 12345</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-var(--color-primary)/10 p-4 rounded-full mr-5 shrink-0">
+                                <i class="fas fa-phone-alt text-var(--color-primary) text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1 text-lg">Contact Numbers</h4>
+                                <p class="text-gray-600 leading-relaxed">Main: (800) 555-1234<br>Sales: (800) 555-5678<br>Emergency: (800) 555-9999</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-var(--color-primary)/10 p-4 rounded-full mr-5 shrink-0">
+                                <i class="fas fa-envelope text-var(--color-primary) text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1 text-lg">Email Addresses</h4>
+                                <p class="text-gray-600 leading-relaxed">general@insupro.com<br>sales@insupro.com<br>support@insupro.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-var(--color-primary)/10 p-4 rounded-full mr-5 shrink-0">
+                                <i class="fas fa-clock text-var(--color-primary) text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1 text-lg">Business Hours</h4>
+                                <p class="text-gray-600 leading-relaxed">Monday-Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10"> {/* Increased margin */}
+                        <h4 class="font-semibold text-gray-800 mb-5 text-lg">Follow Us</h4> {/* Increased margin */}
+                        <div class="flex space-x-5"> {/* Increased spacing */}
+                            <a href="#" class="w-12 h-12 bg-var(--color-primary) text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg transform hover:scale-110">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg transform hover:scale-110">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-pink-500 text-white rounded-full flex items-center justify-center hover:bg-pink-600 transition duration-300 shadow-md hover:shadow-lg transform hover:scale-110">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-blue-800 text-white rounded-full flex items-center justify-center hover:bg-blue-900 transition duration-300 shadow-md hover:shadow-lg transform hover:scale-110">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator -->
+    <section class="py-20 bg-white"> <!-- Changed bg, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-var(--color-light) rounded-xl shadow-xl p-8 md:p-12"> <!-- Adjusted max-width, bg, shadow, padding -->
+                <h2 class="text-3xl font-bold text-var(--color-dark) mb-8 text-center">Quick Quote Calculator</h2> <!-- Increased font size and margin -->
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Project Type</label>
+                                <select class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm bg-white">
+                                    <option>Residential</option>
+                                    <option>Commercial</option>
+                                    <option>Industrial</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Area (sq.ft)</label>
+                                <input type="number" placeholder="e.g., 1500" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm">
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Insulation Type</label>
+                                <select class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm bg-white">
+                                    <option>Thermal</option>
+                                    <option>Acoustic</option>
+                                    <option>Fireproofing</option>
+                                    <option>Combination</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1.5">Location</label>
+                                <select class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm bg-white">
+                                    <option>Dubai</option>
+                                    <option>Abu Dhabi</option>
+                                    <option>Sharjah</option>
+                                    <option>Other Emirates</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-primary w-full py-3 text-base mt-2"> {/* Used btn-primary, adjusted margin */}
+                        Calculate Estimate
+                    </button>
+                    <div class="text-center py-6 border-t border-gray-300 mt-8"> <!-- Increased padding and margin -->
+                        <p class="font-bold text-var(--color-dark) text-xl">Estimated Cost: <span class="text-var(--color-primary)" id="quote-result">AED 0.00</span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get a Quote Section -->
+    <section id="quote" class="py-20 bg-var(--color-light)"> <!-- Changed bg, increased padding -->
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-2xl p-8 md:p-12"> <!-- Adjusted max-width, shadow, padding -->
+                <div class="text-center mb-10"> <!-- Increased margin -->
+                    <h2 class="text-3xl md:text-4xl font-bold text-var(--color-dark) mb-3">Get a <span class="highlight">Free Quote</span></h2>
+                    <p class="text-gray-600 leading-relaxed">Complete the form below and we'll get back to you within 24 hours with a customized quote for your project.</p> <!-- Added leading-relaxed -->
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="q-name" class="block text-sm font-medium text-gray-700 mb-1.5">Name*</label>
+                            <input type="text" id="q-name" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm" required>
+                        </div>
+                        <div>
+                            <label for="q-phone" class="block text-sm font-medium text-gray-700 mb-1.5">Phone*</label>
+                            <input type="tel" id="q-phone" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="q-email" class="block text-sm font-medium text-gray-700 mb-1.5">Email*</label>
+                        <input type="email" id="q-email" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm" required>
+                    </div>
+
+                    <div>
+                        <label for="q-service" class="block text-sm font-medium text-gray-700 mb-1.5">Service Needed*</label>
+                        <select id="q-service" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm bg-white" required>
+                            <option value="">Select a service</option>
+                            <option value="thermal">Thermal Insulation</option>
+                            <option value="acoustic">Acoustic Insulation</option>
+                            <option value="fireproof">Fireproofing</option>
+                            <option value="specialized">Specialized Solutions</option>
+                            <option value="multiple">Multiple Services</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="q-project" class="block text-sm font-medium text-gray-700 mb-1.5">Project Type*</label>
+                        <select id="q-project" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm bg-white" required>
+                            <option value="">Select project type</option>
+                            <option value="new-res">New Residential Construction</option>
+                            <option value="renovation">Residential Renovation</option>
+                            <option value="commercial">Commercial Building</option>
+                            <option value="industrial">Industrial Facility</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="q-details" class="block text-sm font-medium text-gray-700 mb-1.5">Project Details*</label>
+                        <textarea id="q-details" rows="5" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-var(--color-primary) focus:border-var(--color-primary) transition-shadow shadow-sm" placeholder="Please describe your project including square footage, location, and any specific requirements..." required></textarea>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input id="q-consent" type="checkbox" class="h-4 w-4 text-var(--color-primary) focus:ring-var(--color-primary) border-gray-300 rounded mr-2.5" required>
+                        <label for="q-consent" class="text-sm text-gray-600">I consent to InsuPro contacting me about my insulation needs.</label>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full py-3.5 text-base"> {/* Used btn-primary */}
+                        Request Free Quote
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-var(--color-dark) text-gray-300 pt-20 pb-10"> <!-- Used CSS var, adjusted padding -->
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 items-start"> <!-- Adjusted gap and items-start -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-5">
+                        <i class="fas fa-building-shield text-var(--color-primary) text-3xl"></i>
+                        <a href="#" class="text-2xl font-bold text-white">Advanced Construction <span class="text-var(--color-primary)">Insulation</span></a>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Professional insulation solutions for residential, commercial and industrial properties, enhancing comfort and efficiency.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-var(--color-primary) transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-var(--color-primary) transition duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-var(--color-primary) transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-var(--color-primary) transition duration-300 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-5 text-white">Quick Links</h3> <!-- Increased font size and margin -->
+                    <ul class="space-y-3.5"> <!-- Increased spacing -->
+                        <li><a href="#" class="hover:text-var(--color-primary) transition duration-300">Home</a></li>
+                        <li><a href="#about" class="hover:text-var(--color-primary) transition duration-300">About Us</a></li>
+                        <li><a href="#services" class="hover:text-var(--color-primary) transition duration-300">Services</a></li>
+                        <li><a href="#projects" class="hover:text-var(--color-primary) transition duration-300">Projects</a></li>
+                        <li><a href="#products" class="hover:text-var(--color-primary) transition duration-300">Products</a></li>
+                        <li><a href="#blog" class="hover:text-var(--color-primary) transition duration-300">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-5 text-white">Services</h3>
+                    <ul class="space-y-3.5">
+                        <li><a href="#services" class="hover:text-var(--color-primary) transition duration-300">Thermal Insulation</a></li>
+                        <li><a href="#services" class="hover:text-var(--color-primary) transition duration-300">Acoustic Insulation</a></li>
+                        <li><a href="#services" class="hover:text-var(--color-primary) transition duration-300">Fireproofing</a></li>
+                        <li><a href="#services" class="hover:text-var(--color-primary) transition duration-300">Specialized Solutions</a></li>
+                        <li><a href="#quote" class="hover:text-var(--color-primary) transition duration-300">Free Consultation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-5 text-white">Contact Info</h3>
+                    <ul class="space-y-4 text-gray-400"> <!-- Increased spacing -->
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-var(--color-primary) text-lg shrink-0"></i>
+                            <span class="leading-relaxed">123 Insulation Street, Building City, BC 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-var(--color-primary) text-lg shrink-0"></i>
+                            <a href="tel:+18005551234" class="hover:text-var(--color-primary) transition-colors">(800) 555-1234</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-var(--color-primary) text-lg shrink-0"></i>
+                            <a href="mailto:info@insupro.com" class="hover:text-var(--color-primary) transition-colors">info@insupro.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-3 text-var(--color-primary) text-lg shrink-0"></i>
+                            <span class="leading-relaxed">Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 mt-8"> <!-- Adjusted border color and margin -->
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                    <p class="text-gray-500 mb-4 md:mb-0">© 2024 InsuPro. All rights reserved. Designed with Precision.</p> <!-- Updated year and text -->
+                    <div class="flex space-x-5">
+                        <a href="#" class="text-gray-500 hover:text-var(--color-primary) transition duration-300">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-var(--color-primary) transition duration-300">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-var(--color-primary) transition duration-300">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Mobile services submenu toggle
+        document.getElementById('services-toggle').addEventListener('click', function() {
+            const submenu = document.getElementById('services-menu');
+            submenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form submission handling (example)
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // In a real implementation, you would send the form data to your server
+                // For this example, we'll just show an alert
+                alert('Thank you! Your message/submission has been received. We will contact you shortly.');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
